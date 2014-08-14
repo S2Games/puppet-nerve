@@ -1,8 +1,6 @@
 #nerve
 [![Build Status](https://travis-ci.org/solarkennedy/puppet-nerve.png)](https://travis-ci.org/solarkennedy/puppet-nerve)
 
-# WARNING: Only works on an Nerve 3.0 (which at the time of this writing is unreleased)
-
 ##Overview
 
 This puppet module installs and configures [Nerve](https://github.com/airbnb/nerve) as part of Airbnb's [SmartStack](http://nerds.airbnb.com/smartstack-service-discovery-cloud/).
