@@ -16,7 +16,7 @@ class nerve::install {
 
   package { 'nerve':
     name     => $package_name,
-    ensure   => $nerve::package_ensure,
+    ensure   => present,
     provider => $nerve::package_provider,
   }
 

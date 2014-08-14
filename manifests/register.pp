@@ -11,10 +11,11 @@ define nerve::register (
   $port,
   $ensure         = 'present',
   $host           = '127.0.0.1',
-  $zk_hosts       = ["localhost:2181"],
-  $zk_path        = "/nerve/services/${name}",
+  $service_hosts  = ["localhost:2181"],
+  $service_path   = "/nerve/services/${name}",
+  $service_type   = 'zookeeper',
   $check_interval = '2',
-  $checks         =  [
+  $checks         = [
     {
       "type"    => "http",
       "uri"     => "/health",

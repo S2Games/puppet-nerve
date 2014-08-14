@@ -1,8 +1,13 @@
 {
   "port": <%= @port -%>,
   "host": "<%= @host -%>",
-  "zk_hosts": <%= @zk_hosts -%>,
-  "zk_path": "<%= @zk_path -%>",
+<% if @service_type.downcase == 'zookeeper' -%>
+  "zk_hosts": <%= @service_hosts -%>,
+  "zk_path": "<%= @service_path -%>",
+<% elsif @service_type.downcase == 'etcd' -%>
+  "etcd_hosts": <%= @service_hosts -%>,
+  "etcd_path": "<%= @service_path -%>",
+<% end -%>
   "check_interval": <%= @check_interval -%>,
   "checks": <%= require "json"; JSON.generate @checks %>
 }
