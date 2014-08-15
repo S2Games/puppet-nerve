@@ -45,8 +45,9 @@ These are the defaults (Everything optional except for port):
       port           => '3000',
       target         => '/etc/nerve/conf.d/service1.json',
       host           => '127.0.0.1',
-      zk_hosts       => ["localhost:2181"],
-      zk_path        => "/nerve/services/service1",
+      service_hosts  => ["localhost:2181"],
+      service_path   => "/nerve/services/service1",
+      service_type   => 'zookeeper',
       check_interval => '2',
       checks         => [
         {

@@ -6,6 +6,8 @@
 #
 # [*port*]
 #   Port on the local side that the service is exposing. No default.
+# [*service_type*]
+#   Can be either 'zookeeper' or 'etcd'.
 #
 define nerve::register (
   $port,
